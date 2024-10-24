@@ -34,14 +34,12 @@ function randomucNumbersGenerator() {
   //     generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
   //   }
   while (generatedNumber.length < 5) {
-    let isDoubleNumber = false;
+    let isDoubleNumber = true;
 
-    let currentNumber = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+    let currentNumber = Math.floor(Math.random() * (10 - 1 + 1) + 1);
 
     for (let i = 0; i < 5; i++) {
-      if (currentNumber != generatedNumber[i]) {
-        isDoubleNumber = true;
-      } else {
+      if (currentNumber == generatedNumber[i]) {
         isDoubleNumber = false;
       }
     }
@@ -50,6 +48,7 @@ function randomucNumbersGenerator() {
       generatedNumber.push(currentNumber);
     }
   }
+
   //   console.log(generatedNumber);
 
   for (let i = 0; i < 5; i++) {

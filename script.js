@@ -30,15 +30,12 @@ const arrayOfNode = [numUno, numDue, numTre, numQuattro, numCinque];
 let generatedNumber = [];
 
 function randomucNumbersGenerator() {
-  //   for (let i = 0; i < 5; i++) {
-  //     generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
-  //   }
   while (generatedNumber.length < 5) {
     let isDoubleNumber = true;
 
     let currentNumber = Math.floor(Math.random() * (99 - 1 + 1) + 1);
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < generatedNumber.length; i++) {
       if (currentNumber == generatedNumber[i]) {
         isDoubleNumber = false;
       }

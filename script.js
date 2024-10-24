@@ -36,7 +36,7 @@ function randomucNumbersGenerator() {
   while (generatedNumber.length < 5) {
     let isDoubleNumber = true;
 
-    let currentNumber = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+    let currentNumber = Math.floor(Math.random() * (99 - 1 + 1) + 1);
 
     for (let i = 0; i < 5; i++) {
       if (currentNumber == generatedNumber[i]) {

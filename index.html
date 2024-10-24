@@ -25,11 +25,14 @@
   <body class="bg-light">
     <div class="container">
       <div class="form bg-secondary my-5 py-5 text-center rounded">
-        <h1 class="p-3">Ricorda i numeri</h1>
+        <h1 class="p-3" id="titol">Ricorda i numeri</h1>
 
         <!-- -------------------- RANDOMIC NUMBERS -------------------- -->
 
-        <div class="randomic-num-container d-flex justify-content-center py-5">
+        <div
+          class="d-flex justify-content-center py-5"
+          id="randomic-num-container"
+        >
           <div class="fs-2 px-5" id="num-uno"></div>
           <div class="fs-2 px-5" id="num-due"></div>
           <div class="fs-2 px-5" id="num-tre"></div>
@@ -38,7 +41,7 @@
         </div>
 
         <!-- -------------------- FORM INPUT NUMBERS -------------------- -->
-        <div class="form-container d-none">
+        <div class="d-none" id="form-container">
           <div class="num-container row d-flex justify-content-center py-5">
             <div class="num-uno col-md-2">
               <input type="text" class="form-control m-3" id="input-uno" />
@@ -57,7 +60,9 @@
             </div>
           </div>
           <div class="confirm-num">
-            <button type="button" class="btn btn-primary">CONFERMA</button>
+            <button type="button" class="btn btn-primary" id="button-conferma">
+              CONFERMA
+            </button>
           </div>
         </div>
         <!-- --------------------- -->

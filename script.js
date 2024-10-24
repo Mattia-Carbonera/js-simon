@@ -20,6 +20,7 @@ const inputTre = document.getElementById("input-tre");
 const inputQuattro = document.getElementById("input-quattro");
 const inputCinque = document.getElementById("input-cinque");
 const buttonConferma = document.getElementById("button-conferma");
+const numberForm = document.getElementById("number-form");
 // console.log(inputUno, inputDue, inputTre, inputQuattro, inputCinque);
 
 const arrayOfNode = [numUno, numDue, numTre, numQuattro, numCinque];
@@ -34,7 +35,7 @@ function randomucNumbersGenerator() {
   for (let i = 0; i < 5; i++) {
     generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
   }
-  console.log(generatedNumber);
+  //   console.log(generatedNumber);
 
   for (let i = 0; i < 5; i++) {
     arrayOfNode[i].innerHTML = generatedNumber[i];
@@ -51,7 +52,9 @@ randomucNumbersGenerator();
 
 setTimeout(switchForm, 3000);
 
-buttonConferma.addEventListener("click", (event) => {
+numberForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const inputUnoEl = inputUno.value;
   const inputDueEl = inputDue.value;
   const inputTreEl = inputTre.value;

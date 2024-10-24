@@ -30,10 +30,25 @@ const arrayOfNode = [numUno, numDue, numTre, numQuattro, numCinque];
 let generatedNumber = [];
 
 function randomucNumbersGenerator() {
-  let randomNumber = 0;
+  //   for (let i = 0; i < 5; i++) {
+  //     generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
+  //   }
+  while (generatedNumber.length < 5) {
+    let isDoubleNumber = false;
 
-  for (let i = 0; i < 5; i++) {
-    generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
+    let currentNumber = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+
+    for (let i = 0; i < 5; i++) {
+      if (currentNumber != generatedNumber[i]) {
+        isDoubleNumber = true;
+      } else {
+        isDoubleNumber = false;
+      }
+    }
+
+    if (isDoubleNumber) {
+      generatedNumber.push(currentNumber);
+    }
   }
   //   console.log(generatedNumber);
 
@@ -50,7 +65,7 @@ function switchForm() {
 
 randomucNumbersGenerator();
 
-setTimeout(switchForm, 3000);
+setTimeout(switchForm, 30000);
 
 numberForm.addEventListener("submit", (event) => {
   event.preventDefault();

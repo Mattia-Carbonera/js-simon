@@ -26,10 +26,10 @@ const arrayOfNode = [numUno, numDue, numTre, numQuattro, numCinque];
 // console.log(arrayOfNode);
 
 // --------------------------- NUMERI CASUALI ---------------------------
+let generatedNumber = [];
 
 function randomucNumbersGenerator() {
   let randomNumber = 0;
-  let generatedNumber = [];
 
   for (let i = 0; i < 5; i++) {
     generatedNumber.push(Math.floor(Math.random() * (99 - 1 + 1) + 1));
@@ -50,3 +50,53 @@ function switchForm() {
 randomucNumbersGenerator();
 
 setTimeout(switchForm, 3000);
+
+buttonConferma.addEventListener("click", (event) => {
+  const inputUnoEl = inputUno.value;
+  const inputDueEl = inputDue.value;
+  const inputTreEl = inputTre.value;
+  const inputQuattroEl = inputQuattro.value;
+  const inputCinqueEl = inputCinque.value;
+
+  const insertNumbers = [
+    inputUnoEl,
+    inputDueEl,
+    inputTreEl,
+    inputQuattroEl,
+    inputCinqueEl,
+  ];
+
+  let guessedNumbers = [];
+
+  insertNumbers.forEach((number) => {
+    for (let i = 0; i < 5; i++) {
+      if (number == generatedNumber[i]) {
+        guessedNumbers.push(generatedNumber[i]);
+      }
+    }
+  });
+
+  if (guessedNumbers.length > 0) {
+    alert(
+      `I numeri da lei indovinati sono ${guessedNumbers.length} e sono ${guessedNumbers}`
+    );
+  } else {
+    alert(`Questa volta non hai indovinato nessun numero...`);
+  }
+
+  //   console.log("guessedNumbers: " + guessedNumbers);
+  //   console.log("generatedNumber: " + generatedNumber);
+
+  //   console.log(
+  //     inputUnoEl,
+  //     inputDueEl,
+  //     inputTreEl,
+  //     inputQuattroEl,
+  //     inputCinqueEl
+  //   );
+  inputUno.value = "";
+  inputDue.value = "";
+  inputTre.value = "";
+  inputQuattro.value = "";
+  inputCinque.value = "";
+});

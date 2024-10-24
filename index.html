@@ -22,7 +22,48 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="bg-light">
+    <div class="container">
+      <div class="form bg-secondary my-5 py-5 text-center rounded">
+        <h1 class="p-3">Ricorda i numeri</h1>
+
+        <!-- -------------------- RANDOMIC NUMBERS -------------------- -->
+
+        <div class="randomic-num-container d-flex justify-content-center py-5">
+          <div class="fs-2 px-5" id="num-uno"></div>
+          <div class="fs-2 px-5" id="num-due"></div>
+          <div class="fs-2 px-5" id="num-tre"></div>
+          <div class="fs-2 px-5" id="num-quattro"></div>
+          <div class="fs-2 px-5" id="num-cinque"></div>
+        </div>
+
+        <!-- -------------------- FORM INPUT NUMBERS -------------------- -->
+        <div class="form-container d-none">
+          <div class="num-container row d-flex justify-content-center py-5">
+            <div class="num-uno col-md-2">
+              <input type="text" class="form-control m-3" id="input-uno" />
+            </div>
+            <div class="num-due col-md-2">
+              <input type="text" class="form-control m-3" id="input-due" />
+            </div>
+            <div class="num-tre col-md-2">
+              <input type="text" class="form-control m-3" id="input-tre" />
+            </div>
+            <div class="num-quattro col-md-2">
+              <input type="text" class="form-control m-3" id="input-quattro" />
+            </div>
+            <div class="num-cinque col-md-2">
+              <input type="text" class="form-control m-3" id="input-cinque" />
+            </div>
+          </div>
+          <div class="confirm-num">
+            <button type="button" class="btn btn-primary">CONFERMA</button>
+          </div>
+        </div>
+        <!-- --------------------- -->
+      </div>
+    </div>
+
     <!-- bootstrap js -->
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
